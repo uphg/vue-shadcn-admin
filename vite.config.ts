@@ -6,6 +6,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import tailwindcss from '@tailwindcss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
+import Icons from 'unplugin-icons/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -20,6 +21,10 @@ export default defineConfig({
       eslintrc: {
         enabled: true, // <-- this
       },
+    }),
+    Icons({
+      autoInstall: true,
+      compiler: 'vue3',
     }),
     vueDevTools(),
   ],

@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button'
 
 <template>
   <header>
-    <img class="w-50 mr-8" alt="Vue logo" src="@/assets/logo.svg" />
+    <img class="w-50 mr-8" alt="Vue logo" src="@/assets/icons/logo.svg" />
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
