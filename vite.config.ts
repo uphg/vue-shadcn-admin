@@ -7,6 +7,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import tailwindcss from '@tailwindcss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Icons from 'unplugin-icons/vite'
+import { FileSystemIconLoader } from 'unplugin-icons/loaders'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -25,6 +26,9 @@ export default defineConfig({
     Icons({
       autoInstall: true,
       compiler: 'vue3',
+      customCollections: {
+        local: FileSystemIconLoader('./src/assets/icons')
+      }
     }),
     vueDevTools(),
   ],

@@ -14,12 +14,13 @@ Vue-Best 是一个精心设计的 Vue 3 项目基础模板，集成了当前最�
 - **shadcn-vue** - 美观且高度可定制的 UI 组件库
 - **Vue Router** - 官方路由解决方案，支持动态路由和导航守卫
 - **unplugin-auto-import** - 按需自动导入 API，支持 TypeScript
+- **unplugin-icons** - 按需访问数千个图标库作为组件，支持本地 icon 自动导入
 
 ## 项目特点
 
-- 预先配置好开发工具链 (Vite, ESLint, Vitest 等)
+- 预先配置好开发工具链 (Vite, ESLint, TypeScript 等)
 - 合理的项目目录结构
 - 响应式设计支持
-- 现代化的 UI 组件集成
+- 现代化的 UI 组件封装
 - 类型安全的开发体验
 - 极佳的开发体验和构建性能
