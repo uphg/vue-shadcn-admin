@@ -4,18 +4,6 @@ import { Button } from '@/components/ui/button'
 </script>
 
 <template>
-  <header>
-    <img class="w-50 mr-8" alt="Vue logo" src="@/assets/icons/logo.svg" />
-
-    <div class="wrapper">
-
-      <nav class="flex justify-center gap-2">
-        <Button as-child><RouterLink to="/">首页</RouterLink></Button>
-        <Button as-child><RouterLink to="/about">关于</RouterLink></Button>
-      </nav>
-    </div>
-  </header>
-
   <RouterView />
 </template>
 

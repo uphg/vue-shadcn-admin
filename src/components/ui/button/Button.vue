@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import type { HTMLAttributes } from 'vue'
+import type { ButtonHTMLAttributes, HTMLAttributes } from 'vue'
 import { Primitive, type PrimitiveProps } from 'reka-ui'
 import { cn } from '@/lib/utils'
 import { type ButtonVariants, buttonVariants } from '.'
 
-interface Props extends PrimitiveProps {
+/* @vue-ignore */
+interface Props extends PrimitiveProps, ButtonHTMLAttributes {
   variant?: ButtonVariants['variant']
   size?: ButtonVariants['size']
   class?: HTMLAttributes['class']

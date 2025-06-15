@@ -1,22 +1,11 @@
+import LoginForm from "@/components/features/login-form/login-form";
 
 const LoginPage = defineComponent({
   name: 'LoginPage',
   setup() {
     return () => (
-      <div>
-        <h1>Login Page</h1>
-        <p>Please enter your credentials to log in.</p>
-        <form>
-          <div>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" />
-          </div>
-          <div>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" />
-          </div>
-          <button type="submit">Login</button>
-        </form>
+      <div class="flex h-screen w-full items-center justify-center px-4">
+        <LoginForm />
       </div>
     );
   }
