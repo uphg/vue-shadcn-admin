@@ -19,8 +19,8 @@ src/
 │   ├── layout/                # 布局组件
 │   └── ui/                    # UI 库组件
 ├── hooks/                     # Vue 组合函数
-│   ├── use-a-xxx.tsx
-│   └── use-b-xxx.tsx
+│   ├── use-a-foo.tsx
+│   └── use-b-bar.tsx
 ├── pages/                     # 页面组件
 │   ├── home/
 │   │   ├── home-page.tsx
