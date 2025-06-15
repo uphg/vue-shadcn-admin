@@ -1,27 +1,31 @@
 # Vue-Best
 
-现代化 Vue 3 项目最佳实践模板。
+**English** | [中文](README.zh-CN.md) 
 
-## 项目概述
+Modern Vue 3 project best practices template.
 
-Vue-Best 是一个精心设计的 Vue 3 项目基础模板，集成了当前最流行的前端技术栈，为开发者提供开箱即用的最佳实践方案。该模板特别适合快速启动企业级应用、中后台管理系统和现代化 Web 应用开发。
+## Project Overview
 
-## 项目结构
+Vue-Best is a carefully designed Vue 3 project foundation template that integrates the most popular frontend technology stack, providing developers with out-of-the-box best practice solutions. This template is particularly suitable for quickly launching enterprise-level applications, admin management systems, and modern web application development.
+
+## Project Structure
+
+The following is the project directory structure convention.
 
 ```
 src/
-├── assets/                    # 静态资源
-│   ├── icons/                 # SVG 图标
-│   ├── images/                # 图片
-│   └── styles/                # CSS 样式
-├── components/                # 通用组件
-│   ├── features/              # 业务组件
-│   ├── layout/                # 布局组件
-│   └── ui/                    # UI 库组件
-├── hooks/                     # Vue 组合函数
+├── assets/                    # Static resources
+│   ├── icons/                 # SVG icons
+│   ├── images/                # Images
+│   └── styles/                # CSS styles
+├── components/                # Common components
+│   ├── features/              # Business components
+│   ├── layout/                # Layout components
+│   └── ui/                    # UI library components
+├── hooks/                     # Vue composition functions
 │   ├── use-a-foo.tsx
 │   └── use-b-bar.tsx
-├── pages/                     # 页面组件
+├── pages/                     # Page components
 │   ├── home/
 │   │   ├── home-page.tsx
 │   │   ├── home-api.tsx
@@ -31,28 +35,28 @@ src/
 │   │   ├── about-api.tsx
 │   │   └── about-store.tsx
 │   └── ...
-├── router/                     # 页面路由
-├── stores/                     # 全局状态
-├── types/                      # TS类型文件
+├── router/                     # Page routing
+├── stores/                     # Global state
+├── types/                      # TypeScript type files
 ├── App.vue
 └── main.ts
 ```
 
-## 技术栈亮点
+## Technology Stack Highlights
 
-- **Vue 3** - 使用最新版本的 Vue 框架，享受 Composition API 带来的开发体验
-- **TypeScript** - 完整的类型支持，提高代码健壮性和开发效率
-- **Tailwind CSS v4** - 下一代实用优先的 CSS 框架，支持最新特性
-- **shadcn-vue** - 美观且高度可定制的 UI 组件库
-- **Vue Router** - 官方路由解决方案，支持动态路由和导航守卫
-- **unplugin-auto-import** - 按需自动导入 API，支持 TypeScript
-- **unplugin-icons** - 按需访问数千个图标库作为组件，支持本地 icon 自动导入
+- **Vue 3** - Using the latest version of Vue framework, enjoying the development experience brought by Composition API
+- **TypeScript** - Complete type support, improving code robustness and development efficiency
+- **Tailwind CSS v4** - Next-generation utility-first CSS framework with support for the latest features
+- **shadcn-vue** - Beautiful and highly customizable UI component library
+- **Vue Router** - Official routing solution with support for dynamic routing and navigation guards
+- **unplugin-auto-import** - On-demand automatic API imports with TypeScript support
+- **unplugin-icons** - On-demand access to thousands of icon libraries as components, with support for local icon auto-import
 
-## 项目特点
+## Project Features
 
-- 预先配置好开发工具链 (Vite, ESLint, TypeScript 等)
-- 合理的项目目录结构
-- 响应式设计支持
-- 现代化的 UI 组件封装
-- 类型安全的开发体验
-- 极佳的开发体验和构建性能
+- Pre-configured development toolchain (Vite, ESLint, TypeScript, etc.)
+- Reasonable project directory structure
+- Responsive design support
+- Modern UI component encapsulation
+- Type-safe development experience
+- Excellent development experience and build performance
