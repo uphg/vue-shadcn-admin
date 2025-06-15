@@ -1,6 +1,6 @@
 import IconAccessibility from '~icons/lucide/accessibility'
 
-export const IconPage = defineComponent({
+const IconPage = defineComponent({
   name: 'IconPage',
   setup() {
     return () => (
@@ -11,3 +11,6 @@ export const IconPage = defineComponent({
     );
   }
 })
+
+
+export default IconPage;

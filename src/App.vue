@@ -1,6 +1,5 @@
 <script setup lang="ts">
 // import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 import { Button } from '@/components/ui/button'
 </script>
 
@@ -9,7 +8,6 @@ import { Button } from '@/components/ui/button'
     <img class="w-50 mr-8" alt="Vue logo" src="@/assets/icons/logo.svg" />
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
 
       <nav class="flex justify-center gap-2">
         <Button as-child><RouterLink to="/">首页</RouterLink></Button>

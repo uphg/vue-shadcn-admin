@@ -2,9 +2,41 @@
 
 现代化 Vue 3 项目最佳实践模板。
 
-## 项目描述
+## 项目概述
 
 Vue-Best 是一个精心设计的 Vue 3 项目基础模板，集成了当前最流行的前端技术栈，为开发者提供开箱即用的最佳实践方案。该模板特别适合快速启动企业级应用、中后台管理系统和现代化 Web 应用开发。
+
+## 项目结构
+
+```
+src/
+├── assets/                    # 静态资源
+│   ├── icons/                 # SVG 图标
+│   ├── images/                # 图片
+│   └── styles/                # CSS 样式
+├── components/                # 通用组件
+│   ├── features/              # 业务组件
+│   ├── layout/                # 布局组件
+│   └── ui/                    # UI 库组件
+├── hooks/                     # Vue 组合函数
+│   ├── use-a-xxx.tsx
+│   └── use-b-xxx.tsx
+├── pages/                     # 页面组件
+│   ├── home/
+│   │   ├── home-page.tsx
+│   │   ├── home-api.tsx
+│   │   └── home-store.tsx
+│   ├── about/
+│   │   ├── about-page.tsx
+│   │   ├── about-api.tsx
+│   │   └── about-store.tsx
+│   └── ...
+├── router/                     # 页面路由
+├── stores/                     # 全局状态
+├── types/                      # TS类型文件
+├── App.vue
+└── main.ts
+```
 
 ## 技术栈亮点
 
