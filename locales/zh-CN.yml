@@ -1,0 +1,11 @@
+title: 我的应用程序
+description: 这是一个示例应用程序
+button:
+  home: 首页
+  about: 关于
+  icon: 图标
+  back: 返回
+  go: 确定
+  toggle_dark: 切换深色模式
+  toggle_langs: 切换语言
+not-found: 未找到页面

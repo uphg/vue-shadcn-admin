@@ -1,4 +1,5 @@
 import { fileURLToPath, URL } from 'node:url'
+import path from 'node:path'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -8,6 +9,7 @@ import tailwindcss from '@tailwindcss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Icons from 'unplugin-icons/vite'
 import { FileSystemIconLoader } from 'unplugin-icons/loaders'
+import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -29,6 +31,12 @@ export default defineConfig({
       customCollections: {
         local: FileSystemIconLoader('./src/assets/icons')
       }
+    }),
+    VueI18nPlugin({
+      runtimeOnly: true,
+      compositionOnly: true,
+      fullInstall: true,
+      include: [path.resolve(__dirname, 'locales/**')],
     }),
     vueDevTools(),
   ],

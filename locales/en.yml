@@ -1,0 +1,11 @@
+title: My Application
+description: This is a sample application
+button:
+  home: Home
+  about: About
+  icon: Icon
+  back: Back
+  go: GO
+  toggle_dark: Toggle dark mode
+  toggle_langs: Change languages
+not-found: Not found
