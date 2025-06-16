@@ -2,61 +2,45 @@
 
 [English](README.md) | **中文**
 
-现代化 Vue 3 项目最佳实践模板。
+使用 Vite 快速创建基于 Vue 的 Web 应用。
 
-## 项目概述
+## 特性
 
-Vue-Best 一个 Vue 3 项目基础模板，集成了当前最流行的前端技术栈，为开发者提供开箱即用的最佳实践方案。该模板特别适合快速启动企业级应用、中后台管理系统和现代化 Web 应用开发。
+- ⚡️ [Vue 3](https://github.com/vuejs/core), [Vite](https://github.com/vitejs/vite), [esbuild](https://github.com/evanw/esbuild) 带来极速体验。
+- 🍍 [使用 Pinia 的状态管理](https://pinia.vuejs.org)
+- 🎨 [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) - 用于快速构建 Web 应用的 CSS 框架。
+- 🌈 [shadcn-vue](https://github.com/unovue/shadcn-vue) - 一个由社区主导的 [shadcn/ui](https://ui.shadcn.com/) 的 Vue 版本。
+- 🌍 [I18n 国际化开箱即用](./locales)
+- 📥 [API 自动加载](https://github.com/unplugin/unplugin-auto-import) - 直接使用 Composition API 无需引入
+- 🦾 TypeScript
 
-## 项目结构
+## 预设
 
-以下示例展示项目目录结构约定的。
+### UI 库
 
-```
-src/
-├── assets/                    # 静态资源
-│   ├── icons/                 # SVG 图标
-│   ├── images/                # 图片
-│   └── styles/                # CSS 样式
-├── components/                # 通用组件
-│   ├── features/              # 业务组件
-│   ├── layout/                # 布局组件
-│   └── ui/                    # UI 库组件
-├── hooks/                     # Vue 组合函数
-│   ├── use-a-foo.tsx
-│   └── use-b-bar.tsx
-├── pages/                     # 页面组件
-│   ├── home/
-│   │   ├── home-page.tsx
-│   │   ├── home-api.tsx
-│   │   └── home-store.tsx
-│   ├── about/
-│   │   ├── about-page.tsx
-│   │   ├── about-api.tsx
-│   │   └── about-store.tsx
-│   └── ...
-├── router/                     # 页面路由
-├── stores/                     # 全局状态
-├── types/                      # TS类型文件
-├── App.vue
-└── main.ts
-```
+- [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) - 用于快速构建 Web 应用的 CSS 框架。
+- [shadcn-vue](https://github.com/unovue/shadcn-vue) - 一个由社区主导的 [shadcn/ui](https://ui.shadcn.com/) 的 Vue 版本。
 
-## 技术栈亮点
+### 插件
 
-- **Vue 3** - 使用最新版本的 Vue 框架，享受 Composition API 带来的开发体验
-- **TypeScript** - 完整的类型支持，提高代码健壮性和开发效率
-- **Tailwind CSS v4** - 下一代实用优先的 CSS 框架，支持最新特性
-- **shadcn-vue** - 美观且高度可定制的 UI 组件库
-- **Vue Router** - 官方路由解决方案，支持动态路由和导航守卫
-- **unplugin-auto-import** - 按需自动导入 API，支持 TypeScript
-- **unplugin-icons** - 按需访问数千个图标库作为组件，支持本地 icon 自动导入
+- [Vue Router](https://github.com/vuejs/router) - 为 Vue.js 量身打造的声明式、配置灵活且便捷的路由方案。
+- [Pinia](https://pinia.vuejs.org) - 类型安全、可扩展性以及模块化设计, 使用 Composition API 的 Vue 状态管理。
+- [`unplugin-auto-import`](https://github.com/antfu/unplugin-auto-import) - 直接使用 Composition API 等，无需导入
+- [Vue I18n](https://github.com/intlify/vue-i18n-next) - 国际化
+  - [`unplugin-vue-i18n`](https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n) - Vue I18n 的 Vite 插件
 
-## 项目特点
+### 编码风格
 
-- 预先配置好开发工具链 (Vite, ESLint, TypeScript 等)
-- 合理的项目目录结构
-- 响应式设计支持
-- 现代化的 UI 组件封装
-- 类型安全的开发体验
-- 极佳的开发体验和构建性能
+- 使用 Composition API 的 tsx 组件
+- 使用 `-` 分割的文件命名风格，例如 `home-page.tsx`、`use-foo.tsx` 等
+
+### 开发工具
+
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vitest](https://github.com/vitest-dev/vitest) - 基于 Vite 的单元测试框架
+- [VS Code 扩展](./.vscode/extensions.json)
+  - [Vite](https://marketplace.visualstudio.com/items?itemName=antfu.vite) - 自动启动 Vite 服务器
+  - [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) - Vue 3 `<script setup>` IDE 支持
+  - [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) - 图标内联显示和自动补全
+  - [i18n Ally](https://marketplace.visualstudio.com/items?itemName=lokalise.i18n-ally) - 多合一的 I18n 支持
+  - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)

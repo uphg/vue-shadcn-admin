@@ -42,7 +42,7 @@ src/
 └── main.ts
 ```
 
-## Technology Stack Highlights
+## Features
 
 - **Vue 3** - Using the latest version of Vue framework, enjoying the development experience brought by Composition API
 - **TypeScript** - Complete type support, improving code robustness and development efficiency
