@@ -5,8 +5,6 @@ const DefaultLayout = defineComponent({
   name: 'DefaultLayout',
   setup() {
     const { t } = useI18n();
-    console.log('t')
-    console.log(t)
 
     return () => (
       <div class="default-layout flex flex-col min-h-screen">
@@ -29,7 +27,7 @@ const DefaultLayout = defineComponent({
         </main>
         <footer class="bg-gray-800 text-white py-4">
           <div class="max-w-7xl w-full mx-auto px-3 text-center">
-            <p>&copy; 2025 My Application</p>
+            <p>&copy; 2025 {t('title')}</p>
           </div>
         </footer>
       </div>
