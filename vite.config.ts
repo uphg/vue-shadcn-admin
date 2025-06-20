@@ -14,7 +14,7 @@ import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    vue(),
+    vue({}),
     vueJsx(),
     tailwindcss(),
     AutoImport({

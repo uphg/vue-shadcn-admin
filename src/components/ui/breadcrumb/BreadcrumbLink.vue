@@ -1,11 +1,22 @@
 <script lang="ts" setup>
-import type { HTMLAttributes } from 'vue'
+import { useAttrs, mergeProps } from 'vue'
+import type { AnchorHTMLAttributes, HTMLAttributes } from 'vue'
 import { Primitive, type PrimitiveProps } from 'reka-ui'
 import { cn } from '@/lib/utils'
 
-const props = withDefaults(defineProps<PrimitiveProps & { class?: HTMLAttributes['class'] }>(), {
+interface Props extends PrimitiveProps {
+  class?: HTMLAttributes['class']
+  href?: AnchorHTMLAttributes['href']
+  target?: AnchorHTMLAttributes['target']
+  rel?: AnchorHTMLAttributes['rel']
+  download?: AnchorHTMLAttributes['download']
+}
+
+const props = withDefaults(defineProps<Props>(), {
   as: 'a',
 })
+const attrs = useAttrs()
+const mergedProps = mergeProps(props, attrs)
 </script>
 
 <template>
@@ -14,6 +25,7 @@ const props = withDefaults(defineProps<PrimitiveProps & { class?: HTMLAttributes
     :as="as"
     :as-child="asChild"
     :class="cn('hover:text-foreground transition-colors', props.class)"
+    v-bind="mergedProps"
   >
     <slot />
   </Primitive>

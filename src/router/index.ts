@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '@/pages/home/home-page'
 import IconPage from '@/pages/icon/icon-page'
 import DefaultLayout from '@/components/layout/default-layout'
+import DemoPage from '@/pages/demo/demo-page'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -21,6 +22,7 @@ const router = createRouter({
           name: 'icon',
           component: IconPage,
         },
+
         {
           path: '/about',
           name: 'about',
@@ -31,6 +33,11 @@ const router = createRouter({
         },
       ]
     },
+                    {
+          path: '/demo',
+          name: 'demo',
+          component: DemoPage,
+        },
     {
       path: '/login',
       name: 'login',
