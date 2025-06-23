@@ -1,6 +1,5 @@
 import AppSidebar from '@/components/features/app-sidebar/app-sidebar'
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator, } from '@/components/ui/breadcrumb'
-import Button from '@/components/ui/button/Button.vue'
 import { Separator } from '@/components/ui/separator'
 import { SidebarInset, SidebarProvider, SidebarTrigger, } from '@/components/ui/sidebar'
 
@@ -23,7 +22,7 @@ const DemoPage = defineComponent({
               <Breadcrumb>
                 <BreadcrumbList>
                   <BreadcrumbItem class="hidden md:block">
-                    <BreadcrumbLink>
+                    <BreadcrumbLink href="/demo">
                       Building Your Application
                     </BreadcrumbLink>
                   </BreadcrumbItem>

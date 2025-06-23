@@ -7,7 +7,8 @@ import { cn } from '@/lib/utils'
 const props = withDefaults(defineProps<DropdownMenuItemProps & {
   class?: HTMLAttributes['class']
   inset?: boolean
-  variant?: 'default' | 'destructive'
+  variant?: 'default' | 'destructive',
+  onClick?: (event: MouseEvent) => void
 }>(), {
   variant: 'default',
 })
