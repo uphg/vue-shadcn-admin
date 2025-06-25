@@ -1,5 +1,10 @@
-import { RouterLink, RouterView } from "vue-router";
+import AppSidebar from '@/components/features/app-sidebar/app-sidebar'
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator, } from '@/components/ui/breadcrumb'
+import { Separator } from '@/components/ui/separator'
+import { SidebarInset, SidebarProvider, SidebarTrigger, } from '@/components/ui/sidebar'
+
 import { useI18n } from 'vue-i18n'
+import { RouterView } from 'vue-router'
 
 const DefaultLayout = defineComponent({
   name: 'DefaultLayout',
@@ -7,30 +12,33 @@ const DefaultLayout = defineComponent({
     const { t } = useI18n();
 
     return () => (
-      <div class="default-layout flex flex-col min-h-screen">
-        <header class="flex items-center justify-center p-4 bg-gray-800 text-white">
-          <div class="max-w-7xl w-full flex items-center justify-between px-3">
-            <RouterLink to="/">
-              <h1>{t('title')}</h1>
-            </RouterLink>
-            <nav class="flex items-center space-x-4 lg:space-x-6 mx-6">
-              <RouterLink to="/">{t('button.home')}</RouterLink>
-              <RouterLink to="/about">{t('button.about')}</RouterLink>
-              <RouterLink to="/icon">{t('button.icon')}</RouterLink>
-            </nav>
-          </div>
-        </header>
-        <main class="flex-1 bg-gray-100 p-y-6">
-          <div class="max-w-7xl w-full mx-auto px-3 py-6">
+      <SidebarProvider>
+        <AppSidebar />
+        <SidebarInset>
+          <header class="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+            <div class="flex items-center gap-2 px-4">
+              <SidebarTrigger class="-ml-1" />
+              <Separator orientation="vertical" class="mr-2 h-4" />
+              <Breadcrumb>
+                <BreadcrumbList>
+                  <BreadcrumbItem class="hidden md:block">
+                    <BreadcrumbLink href="/demo">
+                      Building Your Application
+                    </BreadcrumbLink>
+                  </BreadcrumbItem>
+                  <BreadcrumbSeparator class="hidden md:block" />
+                  <BreadcrumbItem>
+                    <BreadcrumbPage>Data Fetching</BreadcrumbPage>
+                  </BreadcrumbItem>
+                </BreadcrumbList>
+              </Breadcrumb>
+            </div>
+          </header>
+          <div class="flex flex-1 flex-col gap-4 p-4 pt-0">
             <RouterView />
           </div>
-        </main>
-        <footer class="bg-gray-800 text-white py-4">
-          <div class="max-w-7xl w-full mx-auto px-3 text-center">
-            <p>&copy; 2025 {t('title')}</p>
-          </div>
-        </footer>
-      </div>
+        </SidebarInset>
+      </SidebarProvider>
     );
   }
 });

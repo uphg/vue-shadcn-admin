@@ -156,6 +156,7 @@ const AppSidebar = defineComponent({
     },
   },
   setup(props) {
+
     return () => (
       <Sidebar {...props}>
         <SidebarHeader>
