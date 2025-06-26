@@ -1,32 +1,10 @@
 <script setup lang="ts">
-import type { InputHTMLAttributes, HTMLAttributes } from 'vue'
 import { Primitive, type PrimitiveProps } from 'reka-ui'
 import { useVModel } from '@vueuse/core'
 import { cn } from '@/lib/utils'
+import type { InputProps } from '@/types/intrinsic'
 
-interface Props extends PrimitiveProps {
-  defaultValue?: string | number
-  modelValue?: string | number
-  class?: HTMLAttributes['class']
-  type?: InputHTMLAttributes['type']
-  placeholder?: InputHTMLAttributes['placeholder']
-  disabled?: InputHTMLAttributes['disabled']
-  readonly?: InputHTMLAttributes['readonly']
-  required?: InputHTMLAttributes['required']
-  autocomplete?: InputHTMLAttributes['autocomplete']
-  autofocus?: InputHTMLAttributes['autofocus']
-  form?: InputHTMLAttributes['form']
-  list?: InputHTMLAttributes['list']
-  max?: InputHTMLAttributes['max']
-  maxlength?: InputHTMLAttributes['maxlength']
-  min?: InputHTMLAttributes['min']
-  minlength?: InputHTMLAttributes['minlength']
-  multiple?: InputHTMLAttributes['multiple']
-  name?: InputHTMLAttributes['name']
-  pattern?: InputHTMLAttributes['pattern']
-  step?: InputHTMLAttributes['step']
-  value?: InputHTMLAttributes['value']
-}
+interface Props extends PrimitiveProps, InputProps { }
 
 const props = withDefaults(defineProps<Props>(), {
   as: 'input',

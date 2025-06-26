@@ -36,7 +36,7 @@ const LoginForm = defineComponent({
               </div>
               <Input id="password" type="password" required />
             </div>
-            <Button type="submit" class="w-full">
+            <Button type="submit" class="w-full" onClick={()=>{}}>
               Login
             </Button>
             <Button variant="outline" class="w-full">
