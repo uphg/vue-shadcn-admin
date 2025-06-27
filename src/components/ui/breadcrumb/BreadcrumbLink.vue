@@ -1,14 +1,11 @@
 <script lang="ts" setup>
-import type { AnchorHTMLAttributes, HTMLAttributes } from 'vue'
+import type { HTMLAttributes } from 'vue'
 import { Primitive, type PrimitiveProps } from 'reka-ui'
 import { cn } from '@/lib/utils'
+import type { AnchorProps } from '@/types/intrinsic';
 
-interface Props extends PrimitiveProps {
+interface Props extends PrimitiveProps, AnchorProps {
   class?: HTMLAttributes['class']
-  href?: AnchorHTMLAttributes['href']
-  target?: AnchorHTMLAttributes['target']
-  rel?: AnchorHTMLAttributes['rel']
-  download?: AnchorHTMLAttributes['download']
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -19,7 +16,8 @@ const props = withDefaults(defineProps<Props>(), {
 <template>
   <Primitive
     data-slot="breadcrumb-link"
-    v-bind="props"
+    :as="as"
+    :as-child="asChild"
     :class="cn('hover:text-foreground transition-colors', props.class)"
   >
     <slot />
