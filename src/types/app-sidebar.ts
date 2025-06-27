@@ -6,6 +6,7 @@ export type NavItem = {
   title: string
   url: string
   icon?: any
+  isExternal?: boolean
   items?: NavItem[]
 }
 

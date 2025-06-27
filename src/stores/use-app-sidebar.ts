@@ -1,11 +1,8 @@
 import type { Navs, Projects, Teams } from "@/types/app-sidebar"
 import { defineStore } from "pinia"
-import { ref, type Component } from 'vue'
-import { useI18n } from "vue-i18n"
+import { ref } from 'vue'
 
 export const useAppSidebar = defineStore('app-sidebar', () => {
-  // const { t } = useI18n()
-
   const isMobile = ref(false)
   const visible = ref(false)
   const isCollapsed = ref(false)
